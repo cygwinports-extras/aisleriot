@@ -1,0 +1,19 @@
+inherit gnome2
+
+
+DEPEND="gnome-common
+	pkgconfig(gconf-2.0)
+	pkgconfig(gtk+-3.0)
+	pkgconfig(guile-1.8)
+	pkgconfig(libcanberra-gtk3)
+	pkgconfig(librsvg-2.0)
+	pkgconfig(ice)
+	pkgconfig(sm)
+"
+
+CYGCONF_ARGS="
+	--disable-binreloc
+	--with-card-theme-formats=all
+	--with-kde-card-theme-path=/usr/share/kde4/apps/carddecks
+	--with-pysol-card-theme-path=/usr/share/PySolFC
+"
