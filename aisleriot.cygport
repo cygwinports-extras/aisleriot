@@ -1,0 +1,32 @@
+inherit gnome2
+
+NAME="aisleriot"
+VERSION=3.2.3.2
+RELEASE=1
+CATEGORY="Games GNOME"
+SUMMARY="GNOME solitaire card game"
+DESCRIPTION="Gnome-games is a collection of simple, but addictive, games from
+the GNOME desktop project. They represent many of the popular games and include
+card games, puzzle games and arcade games. They are meant to be the sort of
+game that can be played in five minutes or so. They are also meant to be fun
+enough that you will play them again and again. Of course we can't be held
+responsible for the time and productivity lost while playing them."
+
+PATCH_URI="3.2.3.2-automake.patch"
+
+DEPEND="gnome-common
+	pkgconfig(gconf-2.0)
+	pkgconfig(gtk+-3.0)
+	pkgconfig(guile-1.8)
+	pkgconfig(libcanberra-gtk3)
+	pkgconfig(librsvg-2.0)
+	pkgconfig(ice)
+	pkgconfig(sm)
+"
+
+CYGCONF_ARGS="
+	--disable-binreloc
+	--with-card-theme-formats=all
+	--with-kde-card-theme-path=/usr/share/kde4/apps/carddecks
+	--with-pysol-card-theme-path=/usr/share/PySolFC
+"

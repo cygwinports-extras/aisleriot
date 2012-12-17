@@ -1,0 +1,11 @@
+--- origsrc/aisleriot-3.2.3.2/src/lib/Makefile.am	2012-04-16 12:30:12.000000000 -0500
++++ src/aisleriot-3.2.3.2/src/lib/Makefile.am	2012-12-16 18:19:33.002609700 -0600
+@@ -120,7 +120,7 @@ stamp-ar-marshal.h: ar-marshal.list Make
+ 
+ if HAVE_RSVG
+ 
+-pkglib_PROGRAMS = ar-cards-renderer
++pkglibexec_PROGRAMS = ar-cards-renderer
+ 
+ ar_cards_renderer_SOURCES = \
+ 	render-cards.c
