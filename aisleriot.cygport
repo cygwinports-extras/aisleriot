@@ -23,6 +23,7 @@ DEPEND="gnome-common
 "
 
 CYGCONF_ARGS="
+	GUILE=/usr/bin/guile-2.0
 	--disable-binreloc
 	--with-card-theme-formats=all
 	--with-kde-card-theme-path=/usr/share/kde4/apps/carddecks
