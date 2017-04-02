@@ -1,0 +1,30 @@
+--- origsrc/aisleriot-3.22.1/src/Makefile.am	2016-05-11 10:55:30.000000000 -0500
++++ src/aisleriot-3.22.1/src/Makefile.am	2017-04-02 11:30:19.338221100 -0500
+@@ -53,11 +53,11 @@ sol_CFLAGS = \
+ 	$(AM_CFLAGS)
+ 
+ sol_LDFLAGS = \
+-	$(EXTRA_CXX_LIBS) \
+ 	$(AM_LDFLAGS)
+ 
+ sol_LDADD = \
+ 	lib/libaisleriot.la \
++	$(EXTRA_CXX_LIBS) \
+ 	$(AISLERIOT_LIBS) \
+ 	-lm
+ 
+--- origsrc/aisleriot-3.22.1/src/lib/Makefile.am	2016-09-05 11:36:20.000000000 -0500
++++ src/aisleriot-3.22.1/src/lib/Makefile.am	2017-04-02 11:30:04.253523000 -0500
+@@ -139,11 +139,11 @@ ar_cards_renderer_CFLAGS = \
+ 	$(AM_CFLAGS)
+ 
+ ar_cards_renderer_LDFLAGS = \
+-	$(EXTRA_CXX_LIBS) \
+ 	$(AM_LDFLAGS)
+ 
+ ar_cards_renderer_LDADD = \
+ 	libaisleriot.la \
++	$(EXTRA_CXX_LIBS) \
+ 	$(AISLERIOT_LIBS)
+ 
+ endif # HAVE_RSVG

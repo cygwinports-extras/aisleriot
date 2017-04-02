@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="aisleriot"
-VERSION=3.10.2
+VERSION=3.22.1
 RELEASE=1
 CATEGORY="Games"
 SUMMARY="GNOME solitaire card game"
@@ -11,6 +11,8 @@ card games, puzzle games and arcade games. They are meant to be the sort of
 game that can be played in five minutes or so. They are also meant to be fun
 enough that you will play them again and again. Of course we can't be held
 responsible for the time and productivity lost while playing them."
+
+PATCH_URI="3.22.1-as-needed.patch"
 
 DEPEND="gnome-common
 	pkgconfig(gconf-2.0)
@@ -23,7 +25,6 @@ DEPEND="gnome-common
 "
 
 CYGCONF_ARGS="
-	GUILE=/usr/bin/guile-2.0
 	--disable-binreloc
 	--with-card-theme-formats=all
 	--with-kde-card-theme-path=/usr/share/carddecks
